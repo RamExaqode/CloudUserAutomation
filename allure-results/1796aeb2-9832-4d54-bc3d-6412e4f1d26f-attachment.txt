@@ -1,0 +1,5 @@
+got an error on init: TimeoutError: page.goto: Timeout 10000ms exceeded.
+Call log:
+  - navigating to "https://portal.dev.biosero.com/", waiting until "load"
+
+Login Successful
