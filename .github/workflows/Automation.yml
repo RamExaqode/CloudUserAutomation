@@ -61,8 +61,8 @@ jobs:
       with:
         smtp-server: smtp.gmail.com
         smtp-port: 587
-        smtp-username: ${{ secrets.SMTP_USERNAME }}
-        smtp-password: ${{ secrets.SMTP_PASSWORD }}
+        username: ${{ secrets.SMTP_USERNAME }}
+        password: ${{ secrets.SMTP_PASSWORD }}
         from: 'rammarshivane@exaqode.com'
         to: 'rammarshivane@gmail.com,rammarshivane@exaqode.com'
         subject: 'Test Automation Report for Test Execution'
