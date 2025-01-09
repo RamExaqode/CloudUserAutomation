@@ -59,8 +59,8 @@ jobs:
     - name: Send email
       uses: dawidd6/action-send-mail@v3
       with:
-        smtp-server: smtp.gmail.com
-        smtp-port: 587
+        server-address: smtp.gmail.com
+        server-port: 587
         username: ${{ secrets.SMTP_USERNAME }}
         password: ${{ secrets.SMTP_PASSWORD }}
         from: 'rammarshivane@exaqode.com'
