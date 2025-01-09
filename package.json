@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "runChrome": "npm run runChrome",
+   "runChrome": "npx playwright test --project=chromium",
     "test": "playwright test"
 
   },
