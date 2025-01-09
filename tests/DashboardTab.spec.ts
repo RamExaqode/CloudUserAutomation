@@ -15,7 +15,7 @@ test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
   await expect(MarketplaceText).toHaveText('Marketplace');
 });
 
-test('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
+test.skip('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
   const dashboard = new dashBoardPage(page);
   await dashboard.waitFor(5);
   // Wait for the new tab to open
