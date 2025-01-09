@@ -21,16 +21,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Specify your Node.js version
+        node-version: '22.10.5' 
 
     # Step 3: Install dependencies
     - name: Install dependencies
       run: npm install
 
-    # Step 4: Run tests or build
-    - name: Run tests
-      run: npm test
+    # Step 4: Install Playwright browsers
+    - name: Install Playwright browsers
+      run: npx playwright install
 
-    # Step 5: (Optional) Build the project
-    - name: Build project
-      run: npm run build
+    # Step 5: Run tests
+    - name: Run tests
+      run: npx playwright test
