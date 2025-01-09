@@ -1,4 +1,4 @@
-name: Biosero Automation test
+name: Biosero Automation test Automation.yml
 
 on:
   push:
@@ -58,7 +58,7 @@ jobs:
       run: ls -lR
 
     - name: Send email
-      uses: mohamedhafez/send-smtp-email@v1
+      uses: dawidd6/action-send-mail@v3
       with:
         smtp-server: smtp.gmail.com
         smtp-port: 587
