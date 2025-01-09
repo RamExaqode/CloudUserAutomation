@@ -38,9 +38,8 @@ jobs:
     - name: Print Artifact path
       run: echo ${{ github.workspace }}/.github/workflow/${{ github.run_id }}/artifacts/
 
-    - name: Uploading Production Artifacts
-      uses: actions/upload-artifacts@v4
-      if: ${{ !cancelled() }}
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
         name: report
         path: |
@@ -48,7 +47,7 @@ jobs:
           !playwright-report/**/*.md
 
     - name: Download Artifacts
-      uses: actions/upload-artifacts@v4
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: report
