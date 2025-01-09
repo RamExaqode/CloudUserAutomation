@@ -1,6 +1,10 @@
-name: CI Pipeline
+name: Nightly Execution Pipeline
 
 on:
+  # Trigger on nightly schedule at 2:00 AM UTC
+  schedule:
+    - cron: "0 17 * * *" # Every day at 2:00 AM UTC
+  # Optional: Trigger on push or pull request
   push:
     branches:
       - main
@@ -9,11 +13,11 @@ on:
       - main
 
 jobs:
-  build:
+  nightly-build:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code
+    # Step 1: Checkout code
     - name: Checkout code
       uses: actions/checkout@v3
 
@@ -21,7 +25,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18' 
+        node-version: '18'
 
     # Step 3: Install dependencies
     - name: Install dependencies
