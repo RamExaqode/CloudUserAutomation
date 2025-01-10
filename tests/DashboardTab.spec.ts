@@ -1,17 +1,17 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/loginPage";
-import { dashBoardPage } from "../pages/dashBoardPage";  
+import { dashboardPage } from "../pages/dashboardPage";  
 
 
 
 test.beforeEach(async ({ page }) => {
-  const dashboard = new dashBoardPage(page);
+  const dashboard = new dashboardPage(page);
   await page.goto('https://portal.dev.biosero.com');
   await dashboard.doLogin('rammarshivane@biosero.com', 'Ram@7670'); // Login before each test
 });
 
 test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
-  const dashboard = new dashBoardPage(page);
+  const dashboard = new dashboardPage(page);
   await dashboard.waitFor(5);
   const MarketplaceText = page.locator("xpath=//div[contains(text(), 'Marketplace')]");
   await dashboard.waitFor(5);
@@ -19,7 +19,7 @@ test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
 });
 
 test.skip('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
-  const dashboard = new dashBoardPage(page);
+  const dashboard = new dashboardPage(page);
   await dashboard.waitFor(5);
   // Wait for the new tab to open
   const [newPage] = await Promise.all([
