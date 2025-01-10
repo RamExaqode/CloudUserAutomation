@@ -96,7 +96,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T16:27:32.435Z",
+                  "startTime": "2025-01-10T16:38:00.395Z",
                   "attachments": []
                 }
               ],
@@ -132,7 +132,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T16:27:32.453Z",
+                  "startTime": "2025-01-10T16:38:00.418Z",
                   "attachments": []
                 }
               ],
@@ -174,7 +174,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 20158,
+                      "duration": 30045,
                       "errors": [],
                       "stdout": [
                         {
@@ -183,7 +183,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:27:34.101Z",
+                      "startTime": "2025-01-10T16:38:01.923Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -216,7 +216,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 17987,
+                      "duration": 15960,
                       "errors": [],
                       "stdout": [
                         {
@@ -228,7 +228,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:27:54.602Z",
+                      "startTime": "2025-01-10T16:38:33.908Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -261,7 +261,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 16670,
+                      "duration": 17012,
                       "errors": [],
                       "stdout": [
                         {
@@ -270,7 +270,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:28:12.602Z",
+                      "startTime": "2025-01-10T16:38:49.890Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -303,7 +303,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 14686,
+                      "duration": 14131,
                       "errors": [],
                       "stdout": [
                         {
@@ -312,7 +312,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:28:29.289Z",
+                      "startTime": "2025-01-10T16:39:06.908Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -345,7 +345,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 19086,
+                      "duration": 23325,
                       "errors": [],
                       "stdout": [
                         {
@@ -354,7 +354,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:28:43.983Z",
+                      "startTime": "2025-01-10T16:39:21.045Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -397,7 +397,7 @@
                 {
                   "workerIndex": 1,
                   "status": "timedOut",
-                  "duration": 30165,
+                  "duration": 30144,
                   "error": {
                     "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -412,7 +412,7 @@
                         "column": 17,
                         "line": 20
                       },
-                      "message": "Error: Unable to click on Invitations Tab: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\invitationsPage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m           \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Invitations Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at invitationsPage.clickOnInvitationsTab (F:\\CloudUserAutomation\\pages\\invitationsPage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:13:3\u001b[22m"
+                      "message": "Error: Unable to click on Invitations Tab: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Invitations\\')]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\invitationsPage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m           \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Invitations Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at invitationsPage.clickOnInvitationsTab (F:\\CloudUserAutomation\\pages\\invitationsPage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:13:3\u001b[22m"
                     }
                   ],
                   "stdout": [
@@ -422,7 +422,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T16:27:34.168Z",
+                  "startTime": "2025-01-10T16:38:02.009Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -470,7 +470,7 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 20475,
+                      "duration": 29496,
                       "errors": [],
                       "stdout": [
                         {
@@ -479,7 +479,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:27:34.161Z",
+                      "startTime": "2025-01-10T16:38:01.955Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -512,7 +512,7 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 26881,
+                      "duration": 25522,
                       "errors": [],
                       "stdout": [
                         {
@@ -521,7 +521,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-10T16:27:55.106Z",
+                      "startTime": "2025-01-10T16:38:33.369Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -551,7 +551,7 @@
       "specs": [
         {
           "title": "Verify user can Click on the Members tab",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -563,9 +563,25 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 30089,
-                  "errors": [],
+                  "status": "timedOut",
+                  "duration": 30182,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\membersPage.ts",
+                        "column": 17,
+                        "line": 20
+                      },
+                      "message": "Error: Unable to click on Members Tab: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Members\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjU5MzdiNDdlLTcwNDctNDg4NS1hMjE4LTdhZWYxNjljZjI3NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7cC4pPuuYlcsAIYqh…\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\membersPage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m           \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Members Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at membersPage.clickOnMembersTab (F:\\CloudUserAutomation\\pages\\membersPage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\membersTab.spec.ts:13:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
                       "text": "Login Successful\n"
@@ -573,7 +589,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T16:27:34.226Z",
+                  "startTime": "2025-01-10T16:38:01.905Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -583,7 +599,7 @@
                   ]
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "4be6c5ebb0e770d7dab2-802e6acafd6060a504fa",
@@ -612,9 +628,9 @@
               "projectName": "adminPortal",
               "results": [
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 4,
                   "status": "passed",
-                  "duration": 22004,
+                  "duration": 24103,
                   "errors": [],
                   "stdout": [
                     {
@@ -623,7 +639,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T16:28:04.924Z",
+                  "startTime": "2025-01-10T16:38:35.477Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -646,11 +662,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-10T16:27:32.186Z",
-    "duration": 91019.619,
-    "expected": 9,
+    "startTime": "2025-01-10T16:38:00.323Z",
+    "duration": 104205.363,
+    "expected": 8,
     "skipped": 2,
-    "unexpected": 1,
+    "unexpected": 2,
     "flaky": 0
   }
 }

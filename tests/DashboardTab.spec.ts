@@ -12,7 +12,7 @@ test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
   await dashboard.waitFor(5);
   const MarketplaceText = page.locator("xpath=//div[contains(text(), 'Marketplace')]");
   await dashboard.waitFor(5);
-  await expect(MarketplaceText).toHaveText('Marketplace');
+  await expect(MarketplaceText).toHaveText('Marketplace111');
 });
 
 test.skip('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
