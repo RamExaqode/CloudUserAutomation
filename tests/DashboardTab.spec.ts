@@ -7,12 +7,12 @@ test.beforeEach(async ({ page }) => {
   await dashboard.doLogin('rammarshivane@biosero.com', 'Ram@7670'); // Login before each test
 });
 
-test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
+test('Verify user can Click on the Organization tab', async ({ page }) => {
   const dashboard = new dashBoardPage(page);
   await dashboard.waitFor(5);
   const MarketplaceText = page.locator("xpath=//div[contains(text(), 'Marketplace')]");
   await dashboard.waitFor(5);
-  await expect(MarketplaceText).toHaveText('Marketplace111');
+  await expect(MarketplaceText).toHaveText('Marketplace11');
 });
 
 test.skip('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
