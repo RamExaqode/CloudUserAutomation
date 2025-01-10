@@ -1,14 +1,13 @@
 import { Page } from "@playwright/test";
-import { cachedDataVersionTag } from "v8";
+import { BasePage } from "./basePage";
 
-export class BasePage{
 
-    readonly page:Page
+export class dashBoardPage extends BasePage{
 
     constructor(page: Page){
+      super(page)
+  }
 
-        this.page=page
-    }
 
     async waitFor (timeSeconds: number){
         await this.page.waitForTimeout(timeSeconds  *1000)

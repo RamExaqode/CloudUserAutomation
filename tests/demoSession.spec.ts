@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/loginPage";
-import exp from "constants";
 
 
 test.beforeEach(async ({page})=>{
