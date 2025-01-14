@@ -9,10 +9,10 @@ test.beforeEach(async ({ page }) => {
 
 test('Verify user can Click on the Invitations tab', async ({ page }) => {
     const invitations = new invitationsPage(page);
-
-  await invitations.clickOnInvitationsTab();
-
-  const InvitationsTabText = page.locator("xpath=//h2[contains(text(),'Invitations')]");
-
+     await invitations.clickOnInvitationsTab();
+     const InvitationsTabText = page.locator("xpath=//h2[contains(text(),'Invitations')]");
+     // Wait for the element to be visible
+     await InvitationsTabText.waitFor({ state: 'visible'}); 
+     
   await expect(InvitationsTabText).toHaveText('Invitations');
 });

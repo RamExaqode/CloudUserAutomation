@@ -18,8 +18,8 @@ test.describe('Login',()=>{
 
         const login= new LoginPage(page)
         await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
-       // const title = await page.title();        // Get the page title
-       // console.log('Page Title:', title);
+        const title = await page.title();        
+        console.log('Page Title:', title);
         await expect(page).toHaveTitle("User Portal")
     })
 
@@ -29,7 +29,6 @@ test.describe('Login',()=>{
         const message= await login.doLogin('rammarshivane@biosero.com', 'InvalidPwd')
         console.log("Returned Message", message)
     
-        //await expect(page).toHaveTitle("User Portal")
     })
 
     test ('Verify user can not login to the Admin portal using invalid email', async ({page}, testInfo)=>{
@@ -37,8 +36,6 @@ test.describe('Login',()=>{
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane1@biosero.com', 'Ram@7670')
         //expect(message).toEqual("The username or password provided in the request are invalid.")
-
-       // await expect(page).toHaveTitle("User Portal")
     })
 
     test ('Verify user can see the Dashboard on successful login to Admin Portal', async ({page}, testInfo)=>{
@@ -46,7 +43,7 @@ test.describe('Login',()=>{
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
         const isDashboardVisible= await login.isDashboardVisible();
-
+        console.log("Successfully landed on the Dashboard");
         expect (isDashboardVisible).toEqual(true)
        
     })
@@ -59,6 +56,7 @@ test.describe('Login',()=>{
        // expect (isDashboardVisible).toEqual(true)
         await login.waitFor(3)
         await login.doLogout()
+        console.log("Successfully Logged out")
        
     })
 
