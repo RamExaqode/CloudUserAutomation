@@ -22,10 +22,9 @@ test('Verify user can Click on the Organization tab', async ({ page }) => {
 test('Verify user can Click on the Marketplace tab', async ({ page, context }) => {
   const dashboard = new dashboardPage(page);
   await dashboard.waitFor(5);
-  // Wait for the new tab to open
   const [newPage] = await Promise.all([
     context.waitForEvent('page'),
-    page.click('xpath=//div[contains(text(),"Marketplace")]'), // Replace with the correct selector
+    page.click('xpath=//div[contains(text(),"Marketplace")]'), 
   ]);
 
   // Validate text on the new page

@@ -21,12 +21,5 @@ export class organizationPage extends BasePage{
           throw new Error(`Unable to click on Organization Tab: ${error.message}`);
         }
       }
-      
-
-
-
-
-
-
-
+   
 }

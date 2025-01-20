@@ -9,10 +9,7 @@ test.beforeEach(async ({ page }) => {
 
 test('Verify user can Click on the Organization tab', async ({ page }) => {
   const orgTab = new organizationPage(page);
-
   await orgTab.clickOnOrganizationTab();
-
   const organizationText = page.locator('xpath=//h2[contains(text(), "Organization")]');
-
   await expect(organizationText).toHaveText('Organization');
 });

@@ -23,5 +23,4 @@ test('Verify user can logout from the Admin Portal successfully', async ({ page 
  
 });
 
-
 });

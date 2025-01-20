@@ -67,13 +67,13 @@
   },
   "suites": [
     {
-      "title": "invitationsTab.spec.ts",
-      "file": "invitationsTab.spec.ts",
+      "title": "marketplaceTab.spec.ts",
+      "file": "marketplaceTab.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify user can Click on the Invitations tab",
+          "title": "Verify user can Click on the Marketplace tab",
           "ok": false,
           "tags": [],
           "tests": [
@@ -87,7 +87,7 @@
                 {
                   "workerIndex": 0,
                   "status": "timedOut",
-                  "duration": 30212,
+                  "duration": 30258,
                   "error": {
                     "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -98,11 +98,11 @@
                     },
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\pages\\invitationsPage.ts",
-                        "column": 17,
-                        "line": 20
+                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                        "column": 20,
+                        "line": 17
                       },
-                      "message": "Error: Unable to click on Invitations Tab: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Invitations\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6ImYxMmFmMmY3LTM3NGUtNGM4Yi1hNDQ3LWE3YmI4OGI5MWJiYiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7cAkxIiHRaIuzVuha…\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\invitationsPage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m           \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Invitations Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at invitationsPage.clickOnInvitationsTab (F:\\CloudUserAutomation\\pages\\invitationsPage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:12:6\u001b[22m"
+                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//h2[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mconst\u001b[39m mplaceText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Marketplace')]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m mplaceText\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(mplaceText)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Marketplace'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:17:20\u001b[22m"
                     }
                   ],
                   "stdout": [
@@ -112,12 +112,17 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T19:01:46.115Z",
+                  "startTime": "2025-01-20T12:54:29.603Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal\\video.webm"
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video.webm"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video-1.webm"
                     }
                   ]
                 }
@@ -125,9 +130,9 @@
               "status": "unexpected"
             }
           ],
-          "id": "6304b1875834b372957f-0550ba99de8ef465781f",
-          "file": "invitationsTab.spec.ts",
-          "line": 10,
+          "id": "51e75b662d1efbf972a3-13c2073d28c383f54795",
+          "file": "marketplaceTab.spec.ts",
+          "line": 12,
           "column": 5
         }
       ]
@@ -135,8 +140,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-10T19:01:44.759Z",
-    "duration": 40432.458999999995,
+    "startTime": "2025-01-20T12:54:28.711Z",
+    "duration": 34931.556,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,
