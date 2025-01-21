@@ -6,7 +6,7 @@ import { membersPage } from "../pages/membersPage";
 
 test.describe("Biosero Portal Tests", () => {
     let page; 
-    let orgTab: organizationPage; 
+    let orgTab: organizationPage;   
     let dashboard: dashboardPage; 
     let Members: membersPage;
   
