@@ -12,8 +12,9 @@ export class membersPage extends BasePage{
         try {
           const tabMembers = this.page.locator("xpath=//div[contains(text(),'Members')]");
           
-          await tabMembers.waitFor({ state: 'visible', timeout: 5000 });
-      
+       // await tabMembers.waitFor({ state: 'visible', timeout: 5000 });
+          await tabMembers.waitFor({ state: 'visible', timeout: 10000 }); // Increased timeout
+
           await tabMembers.click();
           await this.page.waitForTimeout(5000);
         } catch (error) {

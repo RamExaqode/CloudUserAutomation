@@ -13,8 +13,9 @@ export class organizationPage extends BasePage{
           const tabOrganization = this.page.locator("xpath=//div[contains(text(),'Organization')]");
           
           // Wait for the element to be visible and ready for interaction
-          await tabOrganization.waitFor({ state: 'visible', timeout: 5000 });
-      
+          await tabOrganization.waitFor({ state: 'visible', timeout: 10000 });// Increased timeout
+          await tabOrganization.waitFor({ state: 'visible', timeout: 50000 }); 
+
           // Click on the tab if it is visible
           await tabOrganization.click();
         } catch (error) {

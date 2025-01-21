@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "F:\\CloudUserAutomation\\playwright.config.ts",
-    "rootDir": "F:/CloudUserAutomation/tests",
+    "configFile": "f:\\CloudUserAutomation\\playwright.config.ts",
+    "rootDir": "f:/CloudUserAutomation/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -28,7 +28,7 @@
         null
       ],
       [
-        "F:\\CloudUserAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "f:\\CloudUserAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         null
       ],
       [
@@ -45,13 +45,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "F:/CloudUserAutomation/test-results",
+        "outputDir": "f:/CloudUserAutomation/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "adminPortal",
         "name": "adminPortal",
-        "testDir": "F:/CloudUserAutomation/tests",
+        "testDir": "f:/CloudUserAutomation/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -85,9 +85,9 @@
               "projectName": "adminPortal",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 2,
                   "status": "timedOut",
-                  "duration": 30258,
+                  "duration": 30066,
                   "error": {
                     "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -98,11 +98,11 @@
                     },
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                        "column": 20,
-                        "line": 17
+                        "file": "f:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
+                        "column": 17,
+                        "line": 20
                       },
-                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//h2[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   \u001b[36mconst\u001b[39m mplaceText \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Marketplace')]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m mplaceText\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(mplaceText)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Marketplace'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:17:20\u001b[22m"
+                      "message": "Error: Unable to click on Marketplace Tab: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\marketPlacePage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m           \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Marketplace Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at marketPlace.clickMarketPlaceTab (f:\\CloudUserAutomation\\pages\\marketPlacePage.ts:20:17)\u001b[22m\n\u001b[2m    at f:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:13:3\u001b[22m"
                     }
                   ],
                   "stdout": [
@@ -112,17 +112,12 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-20T12:54:29.603Z",
+                  "startTime": "2025-01-21T12:58:18.919Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video-1.webm"
+                      "path": "f:\\CloudUserAutomation\\test-results\\marketplaceTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video.webm"
                     }
                   ]
                 }
@@ -140,8 +135,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-20T12:54:28.711Z",
-    "duration": 34931.556,
+    "startTime": "2025-01-21T12:58:16.641Z",
+    "duration": 32902.71900000004,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,
