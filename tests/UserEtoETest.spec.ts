@@ -24,7 +24,7 @@ test.describe("Biosero Portal Tests", () => {
     const orgTab = new organizationPage(page);
   
     await orgTab.clickOnOrganizationTab();
-  
+  //This will validate the text 'Organization' present on the Organization page
     const organizationText = page.locator('xpath=//h2[contains(text(), "Organization")]');
   
     await expect(organizationText).toHaveText('Organization');
@@ -34,7 +34,8 @@ test.describe("Biosero Portal Tests", () => {
     const Members = new membersPage(page);
   
     await Members.clickOnMembersTab();
-  
+    //This will validate the text 'Members' present on the Members page
+
     const MembersTabText = page.locator("xpath=//h2[contains(text(),'Members')]");
   
     await expect(MembersTabText).toHaveText('Members');
