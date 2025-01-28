@@ -58,6 +58,6 @@ test.describe('Login',()=>{
         await login.doLogout()
         console.log("Successfully Logged out")
        
-    })
+    }) 
 
 })

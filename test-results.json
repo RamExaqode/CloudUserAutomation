@@ -67,134 +67,81 @@
   },
   "suites": [
     {
-      "title": "UserEtoETest.spec.ts",
-      "file": "UserEtoETest.spec.ts",
+      "title": "accountTab.spec.ts",
+      "file": "accountTab.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Biosero Portal Tests",
-          "file": "UserEtoETest.spec.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [
+          "title": "Verify user can Click on the Account tab",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "Verify user can Click on the Organization tab",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30113,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 12304,
-                      "error": {
-                        "message": "Error: Unable to click on Organization Tab: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Organization\\')]') to be visible\u001b[22m\n",
-                        "stack": "Error: Unable to click on Organization Tab: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Organization\\')]') to be visible\u001b[22m\n\n    at organizationPage.clickOnOrganizationTab (F:\\CloudUserAutomation\\pages\\organizationPage.ts:22:17)\n    at F:\\CloudUserAutomation\\tests\\UserEtoETest.spec.ts:27:5",
-                        "location": {
-                          "file": "F:\\CloudUserAutomation\\pages\\organizationPage.ts",
-                          "column": 17,
-                          "line": 22
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\organizationPage.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m           \u001b[36mawait\u001b[39m tabOrganization\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Organization Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         }\n \u001b[90m 24 |\u001b[39m       }\n \u001b[90m 25 |\u001b[39m    \u001b[0m"
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
+                        "column": 31,
+                        "line": 21
                       },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "F:\\CloudUserAutomation\\pages\\organizationPage.ts",
-                            "column": 17,
-                            "line": 22
-                          },
-                          "message": "Error: Unable to click on Organization Tab: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Organization\\')]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\organizationPage.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m           \u001b[36mawait\u001b[39m tabOrganization\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Organization Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m         }\n \u001b[90m 24 |\u001b[39m       }\n \u001b[90m 25 |\u001b[39m    \u001b[0m\n\u001b[2m    at organizationPage.clickOnOrganizationTab (F:\\CloudUserAutomation\\pages\\organizationPage.ts:22:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\UserEtoETest.spec.ts:27:5\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Logged in successfully\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:59:25.238Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "F:\\CloudUserAutomation\\test-results\\UserEtoETest-Biosero-Porta-0f9eb-ick-on-the-Organization-tab-adminPortal\\video.webm"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "F:\\CloudUserAutomation\\pages\\organizationPage.ts",
-                        "column": 17,
-                        "line": 22
-                      }
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//h2[contains(text(),\\'Account\\')]')\nExpected string: \u001b[32m\"Account\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h2[contains(text(),\\'Account\\')]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m \u001b[33mMembersTabText\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Account')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[33mMembersTabText\u001b[39m\u001b[33m.\u001b[39misVisible\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m expect(\u001b[33mMembersTabText\u001b[39m)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Account'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:21:31\u001b[22m"
                     }
                   ],
-                  "status": "unexpected"
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    },
+                    {
+                      "text": "Clicked on Account tab\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-23T11:10:24.060Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal\\video.webm"
+                    }
+                  ]
                 }
               ],
-              "id": "7932b449eec89022bb01-6f278938c5e93cc47131",
-              "file": "UserEtoETest.spec.ts",
-              "line": 24,
-              "column": 7
-            },
-            {
-              "title": "Verify user can Click on the Members tab",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [
-                    {
-                      "type": "skip"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-22T12:59:59.720Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "7932b449eec89022bb01-d4bd361a7a5d2f097736",
-              "file": "UserEtoETest.spec.ts",
-              "line": 34,
-              "column": 8
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
+          "file": "accountTab.spec.ts",
+          "line": 10,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-22T12:59:23.993Z",
-    "duration": 35785.376000000004,
+    "startTime": "2025-01-23T11:10:23.217Z",
+    "duration": 32420.414,
     "expected": 0,
-    "skipped": 1,
+    "skipped": 0,
     "unexpected": 1,
     "flaky": 0
   }
