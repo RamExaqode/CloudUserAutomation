@@ -67,14 +67,14 @@
   },
   "suites": [
     {
-      "title": "accountTab.spec.ts",
-      "file": "accountTab.spec.ts",
+      "title": "membersTab.spec.ts",
+      "file": "membersTab.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify user can Click on the Account tab",
-          "ok": false,
+          "title": "Verify user can Click on the Members tab",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -86,50 +86,31 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30113,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                        "column": 31,
-                        "line": 21
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//h2[contains(text(),\\'Account\\')]')\nExpected string: \u001b[32m\"Account\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h2[contains(text(),\\'Account\\')]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m  \u001b[36mconst\u001b[39m \u001b[33mMembersTabText\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Account')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m  \u001b[33mMembersTabText\u001b[39m\u001b[33m.\u001b[39misVisible\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m expect(\u001b[33mMembersTabText\u001b[39m)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Account'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:21:31\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 29531,
+                  "errors": [],
                   "stdout": [
                     {
                       "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on Account tab\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-23T11:10:24.060Z",
+                  "startTime": "2025-01-29T13:03:46.585Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal\\video.webm"
+                      "path": "F:\\CloudUserAutomation\\test-results\\membersTab-Verify-user-can-Click-on-the-Members-tab-adminPortal\\video.webm"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
-          "file": "accountTab.spec.ts",
+          "id": "4be6c5ebb0e770d7dab2-802e6acafd6060a504fa",
+          "file": "membersTab.spec.ts",
           "line": 10,
           "column": 5
         }
@@ -138,11 +119,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-23T11:10:23.217Z",
-    "duration": 32420.414,
-    "expected": 0,
+    "startTime": "2025-01-29T13:03:45.616Z",
+    "duration": 31757.076,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
