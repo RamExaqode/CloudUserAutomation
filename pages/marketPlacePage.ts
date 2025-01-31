@@ -15,7 +15,7 @@ export class marketPlace extends BasePage{
           await tabMarketplace.waitFor({ state: 'visible', timeout: 5000 });
       
           await tabMarketplace.click();
-          await this.page.waitForTimeout(5000);
+        //await this.page.waitForTimeout(100000);
         } catch (error) {
           throw new Error(`Unable to click on Marketplace Tab: ${error.message}`);
         }

@@ -75,7 +75,7 @@
       "specs": [
         {
           "title": "test",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -87,35 +87,14 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30665,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\playwrightInspectorBiosero.spec.ts",
-                        "column": 24,
-                        "line": 31
-                      },
-                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Software' }) to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[90m// Wait for the button to be visible before clicking\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m softwareButton\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m100000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 |\u001b[39m   \n \u001b[90m 33 |\u001b[39m   \u001b[90m// Click the button\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[36mawait\u001b[39m softwareButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\playwrightInspectorBiosero.spec.ts:31:24\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 27516,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-30T13:28:32.162Z",
+                  "startTime": "2025-01-31T16:27:11.668Z",
                   "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\playwrightInspectorBiosero-test-adminPortal\\video-1.webm"
-                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -124,7 +103,7 @@
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "ba08cd93b1930d38400d-45f581e0eec04056aea7",
@@ -137,11 +116,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-30T13:28:31.292Z",
-    "duration": 32876.337,
-    "expected": 0,
+    "startTime": "2025-01-31T16:27:10.412Z",
+    "duration": 30892.354000000003,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
