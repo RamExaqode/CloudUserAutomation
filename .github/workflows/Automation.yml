@@ -68,8 +68,8 @@ jobs:
       with:
         server_address: smtp.gmail.com
         server_port: 587
-        username: ${{ secrets.GMAIL_USERNAME }}  # Your Gmail address
-        password: ${{ secrets.GMAIL_APP_PASSWORD }}  # The App Password from Gmail    
+        username: ${{ secrets.GMAIL_USERNAME }}  
+        password: ${{ secrets.GMAIL_APP_PASSWORD }}     
         from: 'ram.marshivane@exaqode.com'
         to: 'rammarshivane@gmail.com,ram.marshivane@exaqode.com'
         subject: 'Test Automation Report for Test Execution'

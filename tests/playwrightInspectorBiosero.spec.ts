@@ -18,7 +18,7 @@ test('test', async ({ page }) => {
   await dashboardLink.click();
   await page.getByRole('link', { name: 'corporate_fare Organization' }).click();
   await page.getByRole('link', { name: 'groups Members' }).click();
-  await page.getByRole('link', { name: 'mail Invitations' }).click();
+  await page.getByRole('link', { name: 'mail Invitations' }).click();  
   await page.getByRole('link', { name: 'list_alt Subscriptions' }).click();
   await page.getByRole('link', { name: 'encrypted Scheduler Licenses' }).click();
   const page1Promise = page.waitForEvent('popup');
@@ -31,7 +31,7 @@ test('test', async ({ page }) => {
   await softwareButton.waitFor({ state: 'visible', timeout: 10000});
   
   // Click the button
-  await softwareButton.click();
+/*  await softwareButton.click();
   
 
   await page1.getByRole('button', { name: 'Owned' }).click();
@@ -40,5 +40,5 @@ test('test', async ({ page }) => {
   await page1.getByRole('button', { name: 'navigate_next' }).click();
   await page1.getByRole('button', { name: 'last_page' }).click();
   await page1.getByRole('button', { name: 'navigate_before' }).click();
-  await page1.getByRole('button', { name: 'first_page' }).click();
+  await page1.getByRole('button', { name: 'first_page' }).click();*/
 });

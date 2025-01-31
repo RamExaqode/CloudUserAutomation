@@ -25,6 +25,7 @@ test.describe("Biosero Portal Tests", () => {
     const orgTab = new organizationPage(page);
   
     await orgTab.clickOnOrganizationTab();
+    console.log("Successfully Clicked on Organization tab")
   //This will validate the text 'Organization' present on the Organization page
    // const organizationText = page.locator('xpath=//h2[contains(text(), "Organization")]');
   

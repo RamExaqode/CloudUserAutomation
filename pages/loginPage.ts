@@ -60,6 +60,7 @@ async isDashboardVisible() : Promise<boolean>{
       await this.clickUserDetailsAccount();
       await this.waitFor(3);
       await this.clickSignOut();
+      console.log("Successfully Logged out")
     } catch (error) {
       throw new Error(`Unable to do Logout: ${error}`);
 
