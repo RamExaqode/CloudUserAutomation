@@ -27,10 +27,9 @@ test('test', async ({ page }) => {
   await page1.goto('https://marketplace.dev.biosero.com/marketplace');
   const softwareButton = page1.getByRole('button', { name: 'Software' });
 
-  // Wait for the button to be visible before clicking
   await softwareButton.waitFor({ state: 'visible', timeout: 10000});
   
-  // Click the button
+
 /*  await softwareButton.click();
   
 

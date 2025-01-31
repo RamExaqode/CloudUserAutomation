@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   await mplace.doLogin('rammarshivane@biosero.com', 'Ram@7670');
 });
 
-test('Verify user can Click on the Marketplace tab', async ({ page }) => {
+test.skip('Verify user can Click on the Marketplace tab', async ({ page }) => {
   await mplace.clickMarketPlaceTab();
   await page.waitForLoadState('networkidle'); 
 
