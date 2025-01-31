@@ -11,10 +11,10 @@ test('test', async ({ page }) => {
   await page.goto('https://portal.dev.biosero.com/dashboard');
   const dashboardLink = page.getByRole('link', { name: 'space_dashboard Dashboard' });
 
-  // Wait for the element to be visible first
+ 
   await dashboardLink.waitFor({ state: 'visible', timeout: 100000 });
   
-  // Click the element
+ 
   await dashboardLink.click();
   await page.getByRole('link', { name: 'corporate_fare Organization' }).click();
   await page.getByRole('link', { name: 'groups Members' }).click();
@@ -27,10 +27,9 @@ test('test', async ({ page }) => {
   await page1.goto('https://marketplace.dev.biosero.com/marketplace');
   const softwareButton = page1.getByRole('button', { name: 'Software' });
 
-  // Wait for the button to be visible before clicking
+ 
   await softwareButton.waitFor({ state: 'visible', timeout: 10000});
-  
-  // Click the button
+
 /*  await softwareButton.click();
   
 
