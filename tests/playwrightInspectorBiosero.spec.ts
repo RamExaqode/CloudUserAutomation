@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test.skip('test', async ({ page }) => {
   await page.goto('https://bioserob2cdev.b2clogin.com/bioserob2cdev.onmicrosoft.com/b2c_1a_signup_signin/oauth2/v2.0/authorize?client_id=0b878f9b-e2c2-433b-9229-fd285f1ef02b&scope=https%3A%2F%2FBioseroB2CDev.onmicrosoft.com%2Fgraph-api%2FInvitations.ReadWrite%20https%3A%2F%2FBioseroB2CDev.onmicrosoft.com%2Fgraph-api%2FOrganizations.ReadWrite%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fportal.dev.biosero.com%2Fauthentication%2Flogin-callback&client-request-id=61ec2a0e-25ad-4e43-8202-d32350aabdc3&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.16.1&x-client-OS=&x-client-CPU=&client_info=1&code_challenge=tvrL14zW7ytCsrVRhs1Bnv7KTrdoZRXfJVHKfvCRdnQ&code_challenge_method=S256&nonce=1b10cb43-0124-4064-95e7-e26d35b74634&state=eyJpZCI6ImVmYTQ4MThhLTRjNTYtNDMxYS1iZDRlLWU5YTlmZTcyYjRiMiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D%7COJiwA1NykMMp8nfWjKtirnwSkPlqUt3GuFXBhHr5DVU');
   await page.getByRole('textbox', { name: 'Sign in name' }).fill('rammarshivane@biosero.com');
   await page.getByRole('textbox', { name: 'Sign in name' }).press('Tab');

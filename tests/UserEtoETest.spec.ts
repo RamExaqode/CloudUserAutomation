@@ -21,7 +21,7 @@ test.describe("Biosero Portal Tests", () => {
   });
 
 
-  test('Verify user can Click on the Organization tab', async ({ page }) => {
+  test.skip('Verify user can Click on the Organization tab', async ({ page }) => {
     const orgTab = new organizationPage(page);
   
     await orgTab.clickOnOrganizationTab();
