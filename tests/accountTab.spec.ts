@@ -15,6 +15,6 @@ test('Verify user can Click on the Account tab', async ({ page }) => {
   const MembersTabText = page.locator("xpath=//h2[contains(text(),'Account')]");
   await page.waitForTimeout(5000);
 
-  await expect(MembersTabText).toHaveText('Account');
+   await expect(MembersTabText).toHaveText('Account');
 
 });

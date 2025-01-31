@@ -3,15 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "runChrome": "npx playwright test --project=adminPortal",
+    "runChrome": "npx playwright test --project=adminPortal",
     "test": "playwright test"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "^1.50.0",
     "@types/node": "^22.10.5",
     "allure-commandline": "^2.32.0",
     "allure-playwright": "^3.0.8"
