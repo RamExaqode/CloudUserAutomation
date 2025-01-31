@@ -14,7 +14,7 @@ const dashboardLink = page.getByRole('link', { name: 'space_dashboard Dashboard'
   // Wait for the element to be visible first
  dashboardLink.waitFor({ state: 'visible', timeout: 100000 });
   
-  // Click the element
+  
   await dashboardLink.click();
   await page.getByRole('link', { name: 'corporate_fare Organization' }).click();
   await page.getByRole('link', { name: 'groups Members' }).click();
