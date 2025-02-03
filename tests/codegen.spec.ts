@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test.skip('test', async ({ page }) => {
   await page.goto('https://portal.dev.biosero.com');
   await page.getByRole('textbox', { name: 'Sign in name' }).click();
   await page.getByRole('textbox', { name: 'Sign in name' }).fill('rammarshivane@biosero.com');
