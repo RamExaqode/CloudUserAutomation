@@ -40,4 +40,5 @@ const dashboardLink = page.getByRole('link', { name: 'space_dashboard Dashboard'
   await page1.getByRole('button', { name: 'last_page' }).click();
   await page1.getByRole('button', { name: 'navigate_before' }).click();
   await page1.getByRole('button', { name: 'first_page' }).click();*/
+  page.close();
 });
