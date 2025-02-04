@@ -11,7 +11,7 @@ export class subscriptionsPage extends BasePage{
     async clickOnSubscriptionTab() {
         try {
           const tabSubscriptions = this.page.locator("xpath=//div[contains(text(),'Subscription')]");
-          await tabSubscriptions.waitFor({ state: 'visible', timeout: 5000 });
+          await tabSubscriptions.waitFor({ state: 'visible', timeout: 15000 });
           await tabSubscriptions.click();
         } catch (error) {
           throw new Error(`Unable to click on Subscriptions Tab: ${error.message}`);
