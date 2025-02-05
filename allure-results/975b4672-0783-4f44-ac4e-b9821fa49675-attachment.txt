@@ -1,3 +1,0 @@
-Login Successful
-Clicked on the subscription page successfully
-Verified the subscription text successfully

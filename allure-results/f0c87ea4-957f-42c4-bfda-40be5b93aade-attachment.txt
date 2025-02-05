@@ -1,2 +1,0 @@
-Login Successful
-Successfully landed on the Dashboard
