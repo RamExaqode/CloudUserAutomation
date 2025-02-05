@@ -58,7 +58,17 @@ async isDashboardVisible() : Promise<boolean>{
   async doLogout(): Promise<void> {
     try {
       await this.clickUserDetailsAccount();
+
       await this.waitFor(3);
+    const shadowHost = this.page.locator('div.flex');
+
+    const userNameElement = shadowHost.locator('h3.text-lg.text-gray-900');
+
+    await userNameElement.waitFor({ state: 'visible' });
+
+    const userName = await userNameElement.textContent();
+
+    console.log("Username:", userName);
       await this.clickSignOut();
       console.log("Successfully Logged out")
     } catch (error) {
