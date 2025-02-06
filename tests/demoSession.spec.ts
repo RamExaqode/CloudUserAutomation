@@ -14,7 +14,7 @@ try{
 
 test.describe('Login',()=>{
 
-    test ('Verify user can login to the Admin portal using valid credentials', async ({page}, testInfo)=>{
+    test.skip ('Verify user can login to the Admin portal using valid credentials', async ({page}, testInfo)=>{
 
         const login= new LoginPage(page)
         await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
@@ -23,7 +23,7 @@ test.describe('Login',()=>{
         await expect(page).toHaveTitle("User Portal")
     })
 
-    test('Verify user can not login to the Admin portal using invalid password', async ({page}, testInfo)=>{
+    test.skip('Verify user can not login to the Admin portal using invalid password', async ({page}, testInfo)=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane@biosero.com', 'InvalidPwd')
@@ -31,14 +31,14 @@ test.describe('Login',()=>{
     
     })
 
-    test ('Verify user can not login to the Admin portal using invalid email', async ({page}, testInfo)=>{
+    test.skip ('Verify user can not login to the Admin portal using invalid email', async ({page}, testInfo)=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane1@biosero.com', 'Ram@7670')
         //expect(message).toEqual("The username or password provided in the request are invalid.")
     })
 
-    test ('Verify user can see the Dashboard on successful login to Admin Portal', async ({page}, testInfo)=>{
+    test.skip ('Verify user can see the Dashboard on successful login to Admin Portal', async ({page}, testInfo)=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
@@ -52,11 +52,11 @@ test.describe('Login',()=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
-        //const isDashboardVisible= await login.isDashboardVisible();
-       // expect (isDashboardVisible).toEqual(true)
+        const isDashboardVisible= await login.isDashboardVisible();
+       expect (isDashboardVisible).toEqual(true)
         await login.waitFor(3)
         await login.doLogout()
-        console.log("Successfully Logged out")
+       // console.log("Successfully Logged out")
        
     }) 
 

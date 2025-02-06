@@ -28,7 +28,7 @@ test('Verify user can Click on the Marketplace tab', async ({ page, context }) =
   ]);
 
   // Validate text on the new page
- // const text = await newPage.locator("//h2[contains(text(),'Marketplace')]").textContent();
+ //const text = await newPage.locator("//h2[contains(text(),'Marketplace')]").textContent();
   //expect(text?.trim()).toBe('Marketplace'); 
 
   // Optionally, close the new tab
