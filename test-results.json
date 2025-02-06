@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\ramma\\Desktop\\CloudUserAutomationFramework\\CloudUserAutomation\\playwright.config.ts",
-    "rootDir": "C:/Users/ramma/Desktop/CloudUserAutomationFramework/CloudUserAutomation/tests",
+    "configFile": "F:\\CloudUserAutomation\\playwright.config.ts",
+    "rootDir": "F:/CloudUserAutomation/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -9,7 +9,7 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 1,
+    "maxFailures": 0,
     "metadata": {
       "actualWorkers": 1
     },
@@ -28,7 +28,7 @@
         null
       ],
       [
-        "C:\\Users\\ramma\\Desktop\\CloudUserAutomationFramework\\CloudUserAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "F:\\CloudUserAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         null
       ],
       [
@@ -45,362 +45,169 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/ramma/Desktop/CloudUserAutomationFramework/CloudUserAutomation/test-results",
+        "outputDir": "F:/CloudUserAutomation/test-results",
         "repeatEach": 1,
         "retries": 2,
         "metadata": {},
         "id": "adminPortal",
         "name": "adminPortal",
-        "testDir": "C:/Users/ramma/Desktop/CloudUserAutomationFramework/CloudUserAutomation/tests",
+        "testDir": "F:/CloudUserAutomation/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.50.0",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-<<<<<<< HEAD
-      "title": "accountTab.spec.ts",
-      "file": "accountTab.spec.ts",
-=======
-      "title": "demoSession.spec.ts",
-      "file": "demoSession.spec.ts",
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
+      "title": "log.spec.ts",
+      "file": "log.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-<<<<<<< HEAD
-          "title": "Verify user can Click on the Account tab",
-          "ok": false,
+          "title": "Capture Logs Example",
+          "ok": true,
           "tags": [],
           "tests": [
-=======
-          "title": "Login",
-          "file": "demoSession.spec.ts",
-          "line": 15,
-          "column": 6,
-          "specs": [
             {
-              "title": "Verify user can login to the Admin portal using valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
                 {
-                  "timeout": 0,
-                  "annotations": [
-                    {
-                      "type": "skip"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-05T12:46:29.396Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ee9a41d3088626796d22-976410730184530a5928",
-              "file": "demoSession.spec.ts",
-              "line": 17,
-              "column": 10
-            },
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
-            {
-              "title": "Verify user can not login to the Admin portal using invalid password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-<<<<<<< HEAD
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 16289,
+                  "duration": 1006,
                   "error": {
-                    "message": "Error: Failed to Login",
-                    "stack": "Error: Failed to Login\n    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3",
+                    "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6",
                     "location": {
-                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
-                      "column": 11,
-                      "line": 44
+                      "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                      "column": 6,
+                      "line": 9
                     },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
-                        "column": 11,
-                        "line": 44
+                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                        "column": 6,
+                        "line": 9
                       },
-                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3\u001b[22m"
-=======
-                  "timeout": 0,
-                  "annotations": [
+                      "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n\n\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6\u001b[22m"
+                    },
                     {
-                      "type": "skip"
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                        "column": 25,
+                        "line": 32
+                      },
+                      "message": "Error: tracing.stop: Must start tracing before stopping\n\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[90m// Here testInfo is correctly typed\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m tracePath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m`../logs/trace-${testInfo.title}.zip`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mtracing\u001b[33m.\u001b[39mstop({ path\u001b[33m:\u001b[39m tracePath })\u001b[33m;\u001b[39m \u001b[90m// Save trace file\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[90m// Optionally log that tracing is saved\u001b[39m\n \u001b[90m 35 |\u001b[39m   fs\u001b[33m.\u001b[39mappendFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m`[TRACE] Saved trace file to ${tracePath}\\n`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:32:25\u001b[22m"
                     }
                   ],
-                  "expectedStatus": "skipped",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-<<<<<<< HEAD
-                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-04T17:01:53.563Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal\\video.webm"
-                    }
-                  ],
+                  "startTime": "2025-02-06T09:35:24.030Z",
+                  "attachments": [],
                   "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
-                    "column": 11,
-                    "line": 44
+                    "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                    "column": 6,
+                    "line": 9
                   }
                 },
                 {
                   "workerIndex": 1,
-                  "status": "interrupted",
-                  "duration": 884,
+                  "status": "failed",
+                  "duration": 268,
                   "error": {
-                    "message": "Error: page.goto: net::ERR_ABORTED at https://portal.dev.biosero.com/\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_ABORTED at https://portal.dev.biosero.com/\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:6:14",
+                    "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6",
                     "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                      "column": 14,
-                      "line": 6
+                      "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                      "column": 6,
+                      "line": 9
                     },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mAccount\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m accountPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mAccount\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                        "column": 14,
-                        "line": 6
+                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                        "column": 6,
+                        "line": 9
                       },
-                      "message": "Error: page.goto: net::ERR_ABORTED at https://portal.dev.biosero.com/\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mAccount\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m accountPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mAccount\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:6:14\u001b[22m"
+                      "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n\n\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6\u001b[22m"
                     },
                     {
-                      "message": "Error: browserContext._wrapApiCall: Target page, context or browser has been closed"
+                      "message": "Error: browserContext._wrapApiCall: Must start tracing before stopping"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-02-04T17:02:11.512Z",
+                  "startTime": "2025-02-06T09:35:44.614Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal-retry1\\trace.zip"
+                      "path": "F:\\CloudUserAutomation\\test-results\\log-Capture-Logs-Example-adminPortal-retry1\\trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                    "column": 14,
-                    "line": 6
+                    "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
+                    "column": 6,
+                    "line": 9
                   }
-=======
-                      "workerIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-05T12:46:29.397Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
-                }
-              ],
-              "id": "ee9a41d3088626796d22-c017802456460b626cb0",
-              "file": "demoSession.spec.ts",
-              "line": 26,
-              "column": 10
-            },
-            {
-              "title": "Verify user can not login to the Admin portal using invalid email",
-              "ok": true,
-              "tags": [],
-              "tests": [
+                },
                 {
-                  "timeout": 0,
-                  "annotations": [
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 9426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-06T09:35:46.200Z",
+                  "attachments": [
                     {
-                      "type": "skip"
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\log-Capture-Logs-Example-adminPortal-retry2\\video.webm"
                     }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-05T12:46:29.398Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
+                  ]
                 }
               ],
-              "id": "ee9a41d3088626796d22-995b973624319119ee8b",
-              "file": "demoSession.spec.ts",
-              "line": 34,
-              "column": 10
-            },
-            {
-              "title": "Verify user can see the Dashboard on successful login to Admin Portal",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 0,
-                  "annotations": [
-                    {
-                      "type": "skip"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-05T12:46:29.398Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "ee9a41d3088626796d22-c04827accef5ace3cd1f",
-              "file": "demoSession.spec.ts",
-              "line": 41,
-              "column": 10
-            },
-            {
-              "title": "Verify user can Logout form the Admin Portal successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 0,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 81256,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Username: ram Marshivane12\n"
-                        },
-                        {
-                          "text": "Successfully Logged out\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-05T12:46:29.398Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\ramma\\Desktop\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "ee9a41d3088626796d22-222a46a5213ba4db6087",
-              "file": "demoSession.spec.ts",
-              "line": 51,
-              "column": 9
+              "status": "flaky"
             }
-<<<<<<< HEAD
           ],
-          "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
-          "file": "accountTab.spec.ts",
-          "line": 10,
+          "id": "3f18af1a958e0899e9df-83fda6f46f4998120f20",
+          "file": "log.spec.ts",
+          "line": 38,
           "column": 5
-=======
-          ]
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-<<<<<<< HEAD
-    "startTime": "2025-02-04T17:01:52.535Z",
-    "duration": 20504.460000000003,
+    "startTime": "2025-02-06T09:35:23.006Z",
+    "duration": 32901.153,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 1,
-=======
-    "startTime": "2025-02-05T12:46:28.335Z",
-    "duration": 86405.015,
-    "expected": 1,
-    "skipped": 4,
     "unexpected": 0,
->>>>>>> b170f508971e539fb07c3339387e1a21de9ef97a
-    "flaky": 0
+    "flaky": 1
   }
 }

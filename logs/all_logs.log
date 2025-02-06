@@ -1,0 +1,5 @@
+=== Playwright Logs ===
+[REQUEST] GET - https://example.com/
+[RESPONSE] 200 - https://example.com/
+[CONSOLE] log: Test Console Log
+[TRACE] Saved trace file to F:\CloudUserAutomation\logs\trace-Capture Logs Example.zip
