@@ -9,7 +9,7 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 1,
     "metadata": {
       "actualWorkers": 1
     },
@@ -56,30 +56,66 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 0
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.50.0",
-    "workers": 4,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "log.spec.ts",
-      "file": "log.spec.ts",
+      "title": "marketplaceTab.spec.ts",
+      "file": "marketplaceTab.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Capture Logs Example",
+          "title": "Verify user can Click on the Marketplace tab",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-10T16:28:04.325Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "51e75b662d1efbf972a3-13c2073d28c383f54795",
+          "file": "marketplaceTab.spec.ts",
+          "line": 10,
+          "column": 6
+        },
+        {
+          "title": "Count total items in a paginated list",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -88,126 +124,194 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 1006,
+                  "duration": 207786,
                   "error": {
-                    "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'",
-                    "stack": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6",
+                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
                     "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                      "column": 6,
-                      "line": 9
+                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                      "column": 16,
+                      "line": 34
                     },
-                    "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                        "column": 6,
-                        "line": 9
+                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                        "column": 16,
+                        "line": 34
                       },
-                      "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n\n\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6\u001b[22m"
-                    },
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                        "column": 25,
-                        "line": 32
-                      },
-                      "message": "Error: tracing.stop: Must start tracing before stopping\n\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[90m// Here testInfo is correctly typed\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m tracePath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m`../logs/trace-${testInfo.title}.zip`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mtracing\u001b[33m.\u001b[39mstop({ path\u001b[33m:\u001b[39m tracePath })\u001b[33m;\u001b[39m \u001b[90m// Save trace file\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[90m// Optionally log that tracing is saved\u001b[39m\n \u001b[90m 35 |\u001b[39m   fs\u001b[33m.\u001b[39mappendFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m`[TRACE] Saved trace file to ${tracePath}\\n`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:32:25\u001b[22m"
+                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    },
+                    {
+                      "text": "Clicked on marketplace tab successfully\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-06T09:35:24.030Z",
-                  "attachments": [],
+                  "startTime": "2025-02-10T16:28:04.327Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal\\video-1.webm"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal\\video.webm"
+                    }
+                  ],
                   "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                    "column": 6,
-                    "line": 9
+                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                    "column": 16,
+                    "line": 34
                   }
                 },
                 {
                   "workerIndex": 1,
                   "status": "failed",
-                  "duration": 268,
+                  "duration": 35200,
                   "error": {
-                    "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'",
-                    "stack": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6",
+                    "message": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n",
+                    "stack": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n\n    at marketPlace.clickMarketPlaceTab (F:\\CloudUserAutomation\\pages\\marketPlacePage.ts:20:17)\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:26:3",
                     "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                      "column": 6,
-                      "line": 9
+                      "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
+                      "column": 17,
+                      "line": 20
                     },
-                    "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m"
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\marketPlacePage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m         \u001b[90m//await this.page.waitForTimeout(100000);\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Marketplace Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                        "column": 6,
-                        "line": 9
+                        "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
+                        "column": 17,
+                        "line": 20
                       },
-                      "message": "Error: ENOENT: no such file or directory, open 'F:\\CloudUserAutomation\\logs\\all_logs.log'\n\n\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m context }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[90m// Clear previous logs\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   fs\u001b[33m.\u001b[39mwriteFileSync(logFilePath\u001b[33m,\u001b[39m \u001b[32m'=== Playwright Logs ===\\n'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[90m// Capture Console Logs\u001b[39m\n \u001b[90m 12 |\u001b[39m   page\u001b[33m.\u001b[39mon(\u001b[32m'console'\u001b[39m\u001b[33m,\u001b[39m (msg) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\log.spec.ts:9:6\u001b[22m"
-                    },
-                    {
-                      "message": "Error: browserContext._wrapApiCall: Must start tracing before stopping"
+                      "message": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\marketPlacePage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m         \u001b[90m//await this.page.waitForTimeout(100000);\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Marketplace Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at marketPlace.clickMarketPlaceTab (F:\\CloudUserAutomation\\pages\\marketPlacePage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:26:3\u001b[22m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-02-06T09:35:44.614Z",
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "F:\\CloudUserAutomation\\test-results\\log-Capture-Logs-Example-adminPortal-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\log.spec.ts",
-                    "column": 6,
-                    "line": 9
-                  }
-                },
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 9426,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 2,
-                  "startTime": "2025-02-06T09:35:46.200Z",
+                  "startTime": "2025-02-10T16:31:35.184Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\log-Capture-Logs-Example-adminPortal-retry2\\video.webm"
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
+                    "column": 17,
+                    "line": 20
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 13956,
+                  "error": {
+                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:6:14",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                      "column": 14,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m mplace \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m marketPlace(page)\u001b[33m;\u001b[39m  \u001b[90m// Declare `mplace` here\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m mplace\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                        "column": 14,
+                        "line": 6
+                      },
+                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m mplace \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m marketPlace(page)\u001b[33m;\u001b[39m  \u001b[90m// Declare `mplace` here\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m mplace\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:6:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-10T16:32:13.880Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry2\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                    "column": 14,
+                    "line": 6
+                  }
                 }
               ],
-              "status": "flaky"
+              "status": "unexpected"
             }
           ],
-          "id": "3f18af1a958e0899e9df-83fda6f46f4998120f20",
-          "file": "log.spec.ts",
-          "line": 38,
+          "id": "51e75b662d1efbf972a3-47498aa7f5b60a7e5408",
+          "file": "marketplaceTab.spec.ts",
+          "line": 24,
           "column": 5
+        },
+        {
+          "title": "Verify total number of drivers on the Drivers tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "51e75b662d1efbf972a3-e61a211d63ba3540b73a",
+          "file": "marketplaceTab.spec.ts",
+          "line": 60,
+          "column": 6
         }
       ]
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
   "stats": {
-    "startTime": "2025-02-06T09:35:23.006Z",
-    "duration": 32901.153,
+    "startTime": "2025-02-10T16:28:03.425Z",
+    "duration": 265606.239,
     "expected": 0,
-    "skipped": 0,
-    "unexpected": 0,
-    "flaky": 1
+    "skipped": 2,
+    "unexpected": 1,
+    "flaky": 0
   }
 }
