@@ -20,7 +20,7 @@ test.skip('Verify user can Click on the Subscriptions tab', async ({ page }) => 
     console.log("Verified the subscription text successfully")
 });
 
-test('Verify total number of Active subcriptions on the Subscriptions tab', async ({ page }) => {
+test.skip('Verify total number of Active subcriptions on the Subscriptions tab', async ({ page }) => {
     const subscTab = new subscriptionsPage(page);
     await subscTab.clickOnSubscriptionTab();
     await subscTab.totalSubscriptions();

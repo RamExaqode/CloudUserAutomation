@@ -68,6 +68,566 @@
   },
   "suites": [
     {
+      "title": "accountTab.spec.ts",
+      "file": "accountTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Account tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 223667,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    },
+                    {
+                      "text": "Clicked on Account tab\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-11T12:27:02.841Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
+          "file": "accountTab.spec.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "codegen.spec.ts",
+      "file": "codegen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-11T12:30:48.643Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "7075dcee4bf043f933b7-1aa1b2f038d1f47d41b3",
+          "file": "codegen.spec.ts",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "DashboardTab.spec.ts",
+      "file": "DashboardTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Organization tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 135497,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-11T12:30:48.680Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Organization-tab-adminPortal\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a296997f95281b8de261-1bae118860ed1b29232d",
+          "file": "DashboardTab.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "Verify user can Click on the Marketplace tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 107186,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-11T12:33:04.212Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video-1.webm"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a296997f95281b8de261-0debe1727dedb41fafe5",
+          "file": "DashboardTab.spec.ts",
+          "line": 22,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "demoSession.spec.ts",
+      "file": "demoSession.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login",
+          "file": "demoSession.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify user can login to the Admin portal using valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:34:51.462Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-976410730184530a5928",
+              "file": "demoSession.spec.ts",
+              "line": 17,
+              "column": 10
+            },
+            {
+              "title": "Verify user can not login to the Admin portal using invalid password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:34:51.464Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-c017802456460b626cb0",
+              "file": "demoSession.spec.ts",
+              "line": 26,
+              "column": 10
+            },
+            {
+              "title": "Verify user can not login to the Admin portal using invalid email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:34:51.464Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-995b973624319119ee8b",
+              "file": "demoSession.spec.ts",
+              "line": 34,
+              "column": 10
+            },
+            {
+              "title": "Verify user can see the Dashboard on successful login to Admin Portal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:34:51.466Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-c04827accef5ace3cd1f",
+              "file": "demoSession.spec.ts",
+              "line": 41,
+              "column": 10
+            },
+            {
+              "title": "Verify user can Logout form the Admin Portal successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 133628,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        },
+                        {
+                          "text": "Username: ram Marshivane12\n"
+                        },
+                        {
+                          "text": "Successfully Logged out\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:34:51.466Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-222a46a5213ba4db6087",
+              "file": "demoSession.spec.ts",
+              "line": 51,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "invitationsTab.spec.ts",
+      "file": "invitationsTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Invitations tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 158044,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-11T12:37:05.231Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6304b1875834b372957f-0550ba99de8ef465781f",
+          "file": "invitationsTab.spec.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "loginOnceToPortal.spec.ts",
+      "file": "loginOnceToPortal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login",
+          "file": "loginOnceToPortal.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify user can login to the Admin portal using valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 128505,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:39:43.303Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-dd694-tal-using-valid-credentials-adminPortal\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c6bd191efe3fab44ca10-5ab9eb2e8387bfd2b196",
+              "file": "loginOnceToPortal.spec.ts",
+              "line": 14,
+              "column": 5
+            },
+            {
+              "title": "Verify user can logout from the Admin Portal successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 170917,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        },
+                        {
+                          "text": "Username: ram Marshivane12\n"
+                        },
+                        {
+                          "text": "Successfully Logged out\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-11T12:41:51.822Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-608d3-e-Admin-Portal-successfully-adminPortal\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c6bd191efe3fab44ca10-a21bd9d6620e968cc533",
+              "file": "loginOnceToPortal.spec.ts",
+              "line": 19,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "marketplaceTab.spec.ts",
       "file": "marketplaceTab.spec.ts",
       "column": 0,
@@ -97,7 +657,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-10T16:28:04.325Z",
+                  "startTime": "2025-02-11T12:44:42.779Z",
                   "attachments": []
                 }
               ],
@@ -124,7 +684,7 @@
                 {
                   "workerIndex": 0,
                   "status": "failed",
-                  "duration": 207786,
+                  "duration": 1016081,
                   "error": {
                     "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
                     "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
@@ -155,7 +715,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-10T16:28:04.327Z",
+                  "startTime": "2025-02-11T12:44:42.780Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -177,36 +737,44 @@
                 {
                   "workerIndex": 1,
                   "status": "failed",
-                  "duration": 35200,
+                  "duration": 111879,
                   "error": {
-                    "message": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n",
-                    "stack": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n\n    at marketPlace.clickMarketPlaceTab (F:\\CloudUserAutomation\\pages\\marketPlacePage.ts:20:17)\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:26:3",
+                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
                     "location": {
-                      "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
-                      "column": 17,
-                      "line": 20
+                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                      "column": 16,
+                      "line": 34
                     },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\marketPlacePage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m         \u001b[90m//await this.page.waitForTimeout(100000);\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Marketplace Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
-                        "column": 17,
-                        "line": 20
+                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                        "column": 16,
+                        "line": 34
                       },
-                      "message": "Error: Unable to click on Marketplace Tab: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[contains(text(),\\'Marketplace\\')]') to be visible\u001b[22m\n\u001b[2m    - waiting for\" https://portal.dev.biosero.com/authentication/login-callback\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://portal.dev.biosero.com/authentication/login-callback#state=eyJpZCI6IjRiOTc1MGQ3LWVlMDAtNDM2OS1hYWMxLWYyOWQ0MjIwMjY4ZiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d%7ct4TTRgwIM3G3Yvh…\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\marketPlacePage.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m         \u001b[90m//await this.page.waitForTimeout(100000);\u001b[39m\n \u001b[90m 19 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m           \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to click on Marketplace Tab: ${error.message}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         }\n \u001b[90m 22 |\u001b[39m     }\n \u001b[90m 23 |\u001b[39m       \u001b[0m\n\u001b[2m    at marketPlace.clickMarketPlaceTab (F:\\CloudUserAutomation\\pages\\marketPlacePage.ts:20:17)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:26:3\u001b[22m"
+                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
                     }
                   ],
                   "stdout": [
                     {
                       "text": "Login Successful\n"
+                    },
+                    {
+                      "text": "Clicked on marketplace tab successfully\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-02-10T16:31:35.184Z",
+                  "startTime": "2025-02-11T13:01:44.317Z",
                   "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\video-1.webm"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -219,40 +787,52 @@
                     }
                   ],
                   "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\pages\\marketPlacePage.ts",
-                    "column": 17,
-                    "line": 20
+                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
+                    "column": 16,
+                    "line": 34
                   }
                 },
                 {
                   "workerIndex": 2,
                   "status": "failed",
-                  "duration": 13956,
+                  "duration": 101636,
                   "error": {
-                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:6:14",
+                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
                     "location": {
                       "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                      "column": 14,
-                      "line": 6
+                      "column": 16,
+                      "line": 34
                     },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m mplace \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m marketPlace(page)\u001b[33m;\u001b[39m  \u001b[90m// Declare `mplace` here\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m mplace\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
                         "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                        "column": 14,
-                        "line": 6
+                        "column": 16,
+                        "line": 34
                       },
-                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m mplace \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m marketPlace(page)\u001b[33m;\u001b[39m  \u001b[90m// Declare `mplace` here\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m mplace\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:6:14\u001b[22m"
+                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Login Successful\n"
+                    },
+                    {
+                      "text": "Clicked on marketplace tab successfully\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 2,
-                  "startTime": "2025-02-10T16:32:13.880Z",
+                  "startTime": "2025-02-11T13:03:41.106Z",
                   "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry2\\video-1.webm"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
@@ -261,8 +841,8 @@
                   ],
                   "errorLocation": {
                     "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                    "column": 14,
-                    "line": 6
+                    "column": 16,
+                    "line": 34
                   }
                 }
               ],
@@ -299,6 +879,239 @@
           "column": 6
         }
       ]
+    },
+    {
+      "title": "membersTab.spec.ts",
+      "file": "membersTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Members tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4be6c5ebb0e770d7dab2-802e6acafd6060a504fa",
+          "file": "membersTab.spec.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "organizationTab.spec.ts",
+      "file": "organizationTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Organization tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "df5e8fea5e2ed808b931-7470c0675f21af6e9687",
+          "file": "organizationTab.spec.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "playwrightInspectorBiosero.spec.ts",
+      "file": "playwrightInspectorBiosero.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ba08cd93b1930d38400d-45f581e0eec04056aea7",
+          "file": "playwrightInspectorBiosero.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "schedulerLicensesTab.spec.ts",
+      "file": "schedulerLicensesTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Scheduler License tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f123103cae5ed47101c4-04d22f1ac02445dcc045",
+          "file": "schedulerLicensesTab.spec.ts",
+          "line": 10,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "subscriptionTab.spec.ts",
+      "file": "subscriptionTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Subscriptions tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a410451e947e2ed05032-db3c4764242bd86bbe9f",
+          "file": "subscriptionTab.spec.ts",
+          "line": 12,
+          "column": 6
+        },
+        {
+          "title": "Verify total number of Active subcriptions on the Subscriptions tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a410451e947e2ed05032-3a43ed0355e1ea35d0a5",
+          "file": "subscriptionTab.spec.ts",
+          "line": 23,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "UserEtoETest.spec.ts",
+      "file": "UserEtoETest.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Biosero Portal Tests",
+          "file": "UserEtoETest.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify user can Click on the Organization tab",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7932b449eec89022bb01-6f278938c5e93cc47131",
+              "file": "UserEtoETest.spec.ts",
+              "line": 24,
+              "column": 8
+            },
+            {
+              "title": "Verify user can Click on the Members tab",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7932b449eec89022bb01-d4bd361a7a5d2f097736",
+              "file": "UserEtoETest.spec.ts",
+              "line": 35,
+              "column": 8
+            }
+          ]
+        }
+      ]
     }
   ],
   "errors": [
@@ -307,10 +1120,10 @@
     }
   ],
   "stats": {
-    "startTime": "2025-02-10T16:28:03.425Z",
-    "duration": 265606.239,
-    "expected": 0,
-    "skipped": 2,
+    "startTime": "2025-02-11T12:27:01.787Z",
+    "duration": 2302537.8570000003,
+    "expected": 7,
+    "skipped": 15,
     "unexpected": 1,
     "flaky": 0
   }
