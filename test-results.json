@@ -9,9 +9,9 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 1,
+    "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -56,14 +56,14 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.50.0",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
@@ -75,11 +75,11 @@
       "specs": [
         {
           "title": "Verify user can Click on the Account tab",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -87,30 +87,139 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 223667,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 20184,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on Account tab\n"
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-11T12:27:02.841Z",
+                  "startTime": "2025-02-14T17:59:59.735Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal\\video.webm"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 17100,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at accountPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-02-14T18:00:24.715Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\CloudUserAutomation\\test-results\\accountTab-Verify-user-can-Click-on-the-Account-tab-adminPortal-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 11,
+                  "status": "interrupted",
+                  "duration": 3529,
+                  "error": {
+                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:6:14",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
+                      "column": 14,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mAccount\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m accountPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mAccount\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
+                        "column": 14,
+                        "line": 6
+                      },
+                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mAccount\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m accountPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mAccount\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:6:14\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: Target page, context or browser has been closed"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-14T18:00:50.608Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
+                    "column": 14,
+                    "line": 6
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
@@ -132,7 +241,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [
                 {
                   "type": "skip"
@@ -150,7 +259,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-11T12:30:48.643Z",
+                  "startTime": "2025-02-14T17:59:57.690Z",
                   "attachments": []
                 }
               ],
@@ -172,39 +281,151 @@
       "specs": [
         {
           "title": "Verify user can Click on the Organization tab",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
               "projectName": "adminPortal",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 135497,
-                  "errors": [],
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 19843,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at dashboardPage.doLogin (F:\\CloudUserAutomation\\pages\\dashboardPage.ts:43:11)\n    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:10:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                      "column": 11,
+                      "line": 43
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\dashboardPage.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 42 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                        "column": 11,
+                        "line": 43
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\dashboardPage.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 42 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m\u001b[0m\n\u001b[2m    at dashboardPage.doLogin (F:\\CloudUserAutomation\\pages\\dashboardPage.ts:43:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:10:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
-                      "text": "Login Successful\n"
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-11T12:30:48.680Z",
+                  "startTime": "2025-02-14T17:59:59.707Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Organization-tab-adminPortal\\video.webm"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                    "column": 11,
+                    "line": 43
+                  }
+                },
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 18146,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at dashboardPage.doLogin (F:\\CloudUserAutomation\\pages\\dashboardPage.ts:43:11)\n    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:10:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                      "column": 11,
+                      "line": 43
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\dashboardPage.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 42 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                        "column": 11,
+                        "line": 43
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\dashboardPage.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 42 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m\u001b[0m\n\u001b[2m    at dashboardPage.doLogin (F:\\CloudUserAutomation\\pages\\dashboardPage.ts:43:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:10:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-02-14T18:00:24.325Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Organization-tab-adminPortal-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Organization-tab-adminPortal-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\dashboardPage.ts",
+                    "column": 11,
+                    "line": 43
+                  }
+                },
+                {
+                  "workerIndex": 9,
+                  "status": "interrupted",
+                  "duration": 3367,
+                  "error": {
+                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:9:14",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts",
+                      "column": 14,
+                      "line": 9
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m dashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m dashboardPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m dashboard\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Login before each test\u001b[39m\n \u001b[90m 11 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts",
+                        "column": 14,
+                        "line": 9
+                      },
+                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  8 |\u001b[39m   \u001b[36mconst\u001b[39m dashboard \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m dashboardPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m dashboard\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Login before each test\u001b[39m\n \u001b[90m 11 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:9:14\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: Target page, context or browser has been closed"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-14T18:00:50.625Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\tests\\DashboardTab.spec.ts",
+                    "column": 14,
+                    "line": 9
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "a296997f95281b8de261-1bae118860ed1b29232d",
@@ -218,40 +439,13 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
               "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 107186,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-02-11T12:33:04.212Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video-1.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-Click-on-the-Marketplace-tab-adminPortal\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "a296997f95281b8de261-0debe1727dedb41fafe5",
@@ -280,7 +474,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -291,14 +485,14 @@
                   "projectName": "adminPortal",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T12:34:51.462Z",
+                      "startTime": "2025-02-14T17:59:59.685Z",
                       "attachments": []
                     }
                   ],
@@ -316,7 +510,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -327,14 +521,14 @@
                   "projectName": "adminPortal",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T12:34:51.464Z",
+                      "startTime": "2025-02-14T17:59:59.688Z",
                       "attachments": []
                     }
                   ],
@@ -352,7 +546,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -363,14 +557,14 @@
                   "projectName": "adminPortal",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T12:34:51.464Z",
+                      "startTime": "2025-02-14T17:59:59.688Z",
                       "attachments": []
                     }
                   ],
@@ -388,7 +582,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -399,14 +593,14 @@
                   "projectName": "adminPortal",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 2,
                       "status": "skipped",
                       "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T12:34:51.466Z",
+                      "startTime": "2025-02-14T17:59:59.688Z",
                       "attachments": []
                     }
                   ],
@@ -420,45 +614,158 @@
             },
             {
               "title": "Verify user can Logout form the Admin Portal successfully",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "adminPortal",
                   "projectName": "adminPortal",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 133628,
-                      "errors": [],
+                      "workerIndex": 2,
+                      "status": "failed",
+                      "duration": 19753,
+                      "error": {
+                        "message": "Error: Failed to Login",
+                        "stack": "Error: Failed to Login\n    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\n    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24",
+                        "location": {
+                          "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                          "column": 7,
+                          "line": 36
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 7,
+                            "line": 36
+                          },
+                          "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Username: ram Marshivane12\n"
-                        },
-                        {
-                          "text": "Successfully Logged out\n"
+                          "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T12:34:51.466Z",
+                      "startTime": "2025-02-14T17:59:59.689Z",
                       "attachments": [
                         {
                           "name": "video",
                           "contentType": "video/webm",
                           "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal\\video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                        "column": 7,
+                        "line": 36
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "status": "failed",
+                      "duration": 17573,
+                      "error": {
+                        "message": "Error: Failed to Login",
+                        "stack": "Error: Failed to Login\n    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\n    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24",
+                        "location": {
+                          "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                          "column": 7,
+                          "line": 36
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 7,
+                            "line": 36
+                          },
+                          "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-02-14T18:00:24.330Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                        "column": 7,
+                        "line": 36
+                      }
+                    },
+                    {
+                      "workerIndex": 10,
+                      "status": "interrupted",
+                      "duration": 3311,
+                      "error": {
+                        "message": "Error: Failed to Login",
+                        "stack": "Error: Failed to Login\n    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\n    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24",
+                        "location": {
+                          "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                          "column": 7,
+                          "line": 36
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 7,
+                            "line": 36
+                          },
+                          "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:36\n\n\u001b[0m \u001b[90m 34 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 35 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 37 |\u001b[39m }\n \u001b[90m 38 |\u001b[39m }\n \u001b[90m 39 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:36:7)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:54:24\u001b[22m"
+                        },
+                        {
+                          "message": "Error: browserContext._wrapApiCall: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ramma\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1155\\chrome-win\\headless_shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\ramma\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-CW4T78 --remote-debugging-pipe --no-startup-window\n<launched> pid=1744"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "got an error on init: Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "An error occurred while trying to login: Error: locator.fill: Target page, context or browser has been closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-02-14T18:00:50.606Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                        "column": 7,
+                        "line": 36
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "ee9a41d3088626796d22-222a46a5213ba4db6087",
@@ -478,39 +785,151 @@
       "specs": [
         {
           "title": "Verify user can Click on the Invitations tab",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
               "projectName": "adminPortal",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 158044,
-                  "errors": [],
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 20646,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at invitationsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:7:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at invitationsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
-                      "text": "Login Successful\n"
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-02-11T12:37:05.231Z",
+                  "startTime": "2025-02-14T17:59:59.904Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "F:\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal\\video.webm"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 16662,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at invitationsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:7:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at invitationsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-02-14T18:00:25.974Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "status": "failed",
+                  "duration": 3266,
+                  "error": {
+                    "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:6:14",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
+                      "column": 14,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m invitations \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m invitationsPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m invitations\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
+                        "column": 14,
+                        "line": 6
+                      },
+                      "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m invitations \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m invitationsPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m invitations\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:6:14\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ramma\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1155\\chrome-win\\headless_shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\ramma\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-K2QQt1 --remote-debugging-pipe --no-startup-window\n<launched> pid=15568\n[pid=15568] <gracefully close start>"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-14T18:00:50.602Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
+                    "column": 14,
+                    "line": 6
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "6304b1875834b372957f-0550ba99de8ef465781f",
@@ -539,35 +958,13 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "adminPortal",
                   "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 128505,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-11T12:39:43.303Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "F:\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-dd694-tal-using-valid-credentials-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "c6bd191efe3fab44ca10-5ab9eb2e8387bfd2b196",
@@ -581,41 +978,13 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "adminPortal",
                   "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 170917,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Username: ram Marshivane12\n"
-                        },
-                        {
-                          "text": "Successfully Logged out\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-11T12:41:51.822Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "F:\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-608d3-e-Admin-Portal-successfully-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "c6bd191efe3fab44ca10-a21bd9d6620e968cc533",
@@ -639,7 +1008,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [
                 {
                   "type": "skip"
@@ -648,19 +1017,7 @@
               "expectedStatus": "skipped",
               "projectId": "adminPortal",
               "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-02-11T12:44:42.779Z",
-                  "attachments": []
-                }
-              ],
+              "results": [],
               "status": "skipped"
             }
           ],
@@ -671,182 +1028,17 @@
         },
         {
           "title": "Count total items in a paginated list",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
               "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 1016081,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
-                    "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                      "column": 16,
-                      "line": 34
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                        "column": 16,
-                        "line": 34
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on marketplace tab successfully\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-02-11T12:44:42.780Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal\\video-1.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                    "column": 16,
-                    "line": 34
-                  }
-                },
-                {
-                  "workerIndex": 1,
-                  "status": "failed",
-                  "duration": 111879,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
-                    "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                      "column": 16,
-                      "line": 34
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                        "column": 16,
-                        "line": 34
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on marketplace tab successfully\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-02-11T13:01:44.317Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\video-1.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry1\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                    "column": 16,
-                    "line": 34
-                  }
-                },
-                {
-                  "workerIndex": 2,
-                  "status": "failed",
-                  "duration": 101636,
-                  "error": {
-                    "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n",
-                    "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16",
-                    "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                      "column": 16,
-                      "line": 34
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                        "column": 16,
-                        "line": 34
-                      },
-                      "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@class=\\'w-full\\']') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mwhile\u001b[39m (hasNextPage) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m\"//li[@class='w-full']\"\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m     \n \u001b[90m 36 |\u001b[39m     \u001b[90m// Fetch items on the current page\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m items \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39m$$(\u001b[32m\"//li[@class='w-full']\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts:34:16\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on marketplace tab successfully\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 2,
-                  "startTime": "2025-02-11T13:03:41.106Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry2\\video-1.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "F:\\CloudUserAutomation\\test-results\\marketplaceTab-Count-total-items-in-a-paginated-list-adminPortal-retry2\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\marketplaceTab.spec.ts",
-                    "column": 16,
-                    "line": 34
-                  }
-                }
-              ],
-              "status": "unexpected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "51e75b662d1efbf972a3-47498aa7f5b60a7e5408",
@@ -860,7 +1052,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [
                 {
                   "type": "skip"
@@ -892,7 +1084,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -920,7 +1112,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -948,7 +1140,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -976,7 +1168,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "adminPortal",
@@ -1004,7 +1196,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [
                 {
                   "type": "skip"
@@ -1028,7 +1220,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [
                 {
                   "type": "skip"
@@ -1067,7 +1259,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -1091,7 +1283,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [
                     {
                       "type": "skip"
@@ -1114,17 +1306,13 @@
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-02-11T12:27:01.787Z",
-    "duration": 2302537.8570000003,
-    "expected": 7,
-    "skipped": 15,
-    "unexpected": 1,
+    "startTime": "2025-02-14T17:59:56.750Z",
+    "duration": 59408.18,
+    "expected": 0,
+    "skipped": 19,
+    "unexpected": 4,
     "flaky": 0
   }
 }

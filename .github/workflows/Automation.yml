@@ -52,14 +52,7 @@ jobs:
         name: playwright-report
         path: playwright-report/**
 
-    # Step 8: Upload additional artifact (Always run, even if tests fail)
-    - name: Upload additional artifact
-      if: always()  # Ensure this runs regardless of previous step result
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact  # The name of the artifact
-        path: ./output/report.txt  # Adjust this path if the file is elsewhere
-
+   
     # Step 9: Show artifacts for debugging (Always run, even if tests fail)
     - name: Show artifacts
       if: always()  # Ensure this runs regardless of previous step result
