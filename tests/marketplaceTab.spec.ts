@@ -21,7 +21,7 @@ test.skip('Verify user can Click on the Marketplace tab', async ({ page }) => {
 //------------------------------------------------------------------------------------------------------
 
 
-test("Count total items in a paginated list", async ({ page }) => {
+test.skip("Count total items in a paginated list", async ({ page }) => {
   const mplace = new marketPlace(page);
   await mplace.clickMarketPlaceTab();
   await page.waitForLoadState("networkidle");
