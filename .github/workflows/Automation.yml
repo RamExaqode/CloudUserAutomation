@@ -8,8 +8,8 @@ on:
     branches:
       - main
 
-  schedule:
-    - cron: '40 19 * * *'  # Runs every day at 6:30 AM UTC
+  #schedule:
+   # - cron: '40 19 * * *'  # Runs every day at 6:30 AM UTC
 
 
 jobs:

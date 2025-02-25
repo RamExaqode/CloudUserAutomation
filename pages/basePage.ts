@@ -19,12 +19,12 @@ export class BasePage{
     
         try {
           await this.page.locator("input#signInName").fill(username);
-          await this.waitFor(1);
+          //await this.waitFor(1);
     
           await this.page.locator("input#password").fill(password);
-          await this.waitFor(1);
+          //await this.waitFor(1);
           await this.page.getByRole('button', {name: 'Sign in'}).click();
-          await this.waitFor(2);
+          //await this.waitFor(2);
     
     // Check if there is an error message visible
     const isErrorVisible = await this.page.isVisible('div.error.pageLevel');

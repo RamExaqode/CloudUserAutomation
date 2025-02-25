@@ -8,9 +8,9 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Verify user can Click on the Account tab', async ({ page }) => {
-  const Account1 = new accountPage(page);
+  const AccountTab = new accountPage(page);
 
-  await Account1.clickOnAccountTab
+  await AccountTab.clickOnAccountTab();
     console.log("Clicked on Account tab")
   const MembersTabText = page.locator("xpath=//h2[contains(text(),'Account')]");
   await page.waitForTimeout(5000);

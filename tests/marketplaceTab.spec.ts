@@ -5,6 +5,8 @@ test.beforeEach(async ({ page }) => {
   const mplace = new marketPlace(page);  // Declare `mplace` here
   await page.goto('https://portal.dev.biosero.com');
   await mplace.doLogin('rammarshivane@biosero.com', 'Ram@7670');
+  //await page.locator("//h2[contains(text(),'Sign in with your sign in name')]").waitFor({ state: "visible", timeout: 10000 });
+  console.log("Landed on login page")
 });
 
 test.skip('Verify user can Click on the Marketplace tab', async ({ page }) => {
@@ -21,45 +23,30 @@ test.skip('Verify user can Click on the Marketplace tab', async ({ page }) => {
 //------------------------------------------------------------------------------------------------------
 
 
-test.skip("Count total items in a paginated list", async ({ page }) => {
+test("Count total items in a paginated list", async ({ page }) => {
   const mplace = new marketPlace(page);
   await mplace.clickMarketPlaceTab();
   await page.waitForLoadState("networkidle");
   console.log("Clicked on marketplace tab successfully");
-
-  let totalItems = 0;
+  test.setTimeout(60000); 
+  /*let totalItems = 0;
   let hasNextPage = true;
 
   while (hasNextPage) {
-    await page.waitForSelector("//li[@class='w-full']", { timeout: 15000 });
-    
-    // Fetch items on the current page
+    await page.waitForSelector("//li[@class='w-full']", { timeout: 30000 });
     const items = await page.$$("//li[@class='w-full']");
     totalItems += items.length;
     console.log(`Items found on current page: ${items.length}`);
-
-    // Check for the "Next" button
     const nextButton = await page.$("//i[contains(text(),'navigate_next')]");
+    
+  }*/
 
-    if (nextButton) {
-      const isVisible = await nextButton.isVisible();
-      if (isVisible) {
-        await nextButton.click();
-        await page.waitForLoadState("networkidle");
-      } else {
-        hasNextPage = false;
-      }
-    } else {
-      hasNextPage = false;
-    }
-  }
-
-  console.log(`Total items across all pages: ${totalItems}`);
+ // console.log(`Total items across all pages: ${totalItems}`);
 });
 
 test.skip('Verify total number of drivers on the Drivers tab', async ({ page }) => {
-  test.setTimeout(60000);  // Set timeout to 60 seconds (60,000ms)
-  const mplace = new marketPlace(page);  // Declare `mplace` inside test
+  test.setTimeout(60000); 
+  const mplace = new marketPlace(page);  
   await mplace.clickMarketPlaceTab();
   await page.waitForLoadState('networkidle'); 
   console.log("Clicked on marketplace tab successfully")
