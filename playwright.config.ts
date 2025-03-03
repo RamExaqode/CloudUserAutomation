@@ -3,7 +3,7 @@ require('dotenv').config();
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 2, // ✅ Always allow retries (for Allure trends)
   workers: process.env.CI ? 1 : undefined,
@@ -18,7 +18,7 @@ export default defineConfig({
     baseURL: 'https://portal.dev.biosero.com',
     trace: 'on-first-retry',
     navigationTimeout: 20000,
-    actionTimeout: 5000,
+    actionTimeout: 40000,
     video: 'on',
     headless: true,
   },

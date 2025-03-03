@@ -14,7 +14,7 @@ try{
 
 test.describe('Login',()=>{
 
-    test.skip ('Verify user can login to the Admin portal using valid credentials', async ({page}, testInfo)=>{
+    test ('Verify user can login to the Admin portal using valid credentials', async ({page}, testInfo)=>{
 
         const login= new LoginPage(page)
         await login.doLogin('rammarshivane@biosero.com', 'Ram@7670')
@@ -23,7 +23,7 @@ test.describe('Login',()=>{
         await expect(page).toHaveTitle("User Portal")
     })
 
-    test.skip('Verify user can not login to the Admin portal using invalid password', async ({page}, testInfo)=>{
+    test('Verify user can not login to the Admin portal using invalid password', async ({page}, testInfo)=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane@biosero.com', 'InvalidPwd')
@@ -31,7 +31,7 @@ test.describe('Login',()=>{
     
     })
 
-    test.skip ('Verify user can not login to the Admin portal using invalid email', async ({page}, testInfo)=>{
+    test ('Verify user can not login to the Admin portal using invalid email', async ({page}, testInfo)=>{
    
         const login= new LoginPage(page)
         const message= await login.doLogin('rammarshivane1@biosero.com', 'Ram@7670')

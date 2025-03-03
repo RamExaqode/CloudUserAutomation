@@ -1,0 +1,4 @@
+got an error on init: Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://portal.dev.biosero.com/", waiting until "load"
+

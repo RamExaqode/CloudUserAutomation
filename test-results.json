@@ -3,15 +3,15 @@
     "configFile": "F:\\CloudUserAutomation\\playwright.config.ts",
     "rootDir": "F:/CloudUserAutomation/tests",
     "forbidOnly": false,
-    "fullyParallel": false,
+    "fullyParallel": true,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 1,
+    "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -56,99 +56,421 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.50.0",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "accountTab.spec.ts",
-      "file": "accountTab.spec.ts",
+      "title": "demoSession.spec.ts",
+      "file": "demoSession.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Verify user can Click on the Account tab",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Login",
+          "file": "demoSession.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 0,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "adminPortal",
-              "projectName": "adminPortal",
-              "results": [
+              "title": "Verify user can login to the Admin portal using valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "interrupted",
-                  "duration": 236368,
-                  "error": {
-                    "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
-                    "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:16:14",
-                    "location": {
-                      "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                      "column": 14,
-                      "line": 16
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m\"Clicked on Account tab\"\u001b[39m)\n \u001b[90m 15 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mMembersTabText\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Account')]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m    \u001b[90m//await expect(MembersTabText).toHaveText('Account');\u001b[39m\n \u001b[90m 19 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
                     {
-                      "location": {
-                        "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                        "column": 14,
-                        "line": 16
-                      },
-                      "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m\"Clicked on Account tab\"\u001b[39m)\n \u001b[90m 15 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mMembersTabText\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=//h2[contains(text(),'Account')]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m    \u001b[90m//await expect(MembersTabText).toHaveText('Account');\u001b[39m\n \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\accountTab.spec.ts:16:14\u001b[22m"
-                    },
-                    {
-                      "message": "Error: browserContext._wrapApiCall: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ramma\\AppData\\Local\\ms-playwright\\chromium-1155\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,ThirdPartyStoragePartitioning,LensOverlay,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --user-data-dir=C:\\Users\\ramma\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-pTRhUL --remote-debugging-pipe --no-startup-window\n<launched> pid=17212\n[pid=17212][err] [17212:20224:0220/184632.178:ERROR:service_client.cc(36)] Unexpected on_device_model service disconnect: The device's GPU is not supported.\n[pid=17212] <gracefully close start>"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 27794,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        },
+                        {
+                          "text": "Page Title: User Portal\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-03T12:36:46.005Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-6843e-tal-using-valid-credentials-adminPortal\\video.webm"
+                        }
+                      ]
                     }
                   ],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Clicked on Account tab\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-02-20T13:13:30.736Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "F:\\CloudUserAutomation\\tests\\accountTab.spec.ts",
-                    "column": 14,
-                    "line": 16
-                  }
+                  "status": "expected"
                 }
               ],
-              "status": "skipped"
+              "id": "ee9a41d3088626796d22-976410730184530a5928",
+              "file": "demoSession.spec.ts",
+              "line": 17,
+              "column": 9
+            },
+            {
+              "title": "Verify user can not login to the Admin portal using invalid password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30848,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 7,
+                            "line": 40
+                          },
+                          "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:40\n\n\u001b[0m \u001b[90m 38 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 39 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m }\n \u001b[90m 42 |\u001b[39m }\n \u001b[90m 43 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:40:7)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:29:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "An error occurred while trying to login: Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-03T12:36:45.910Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-4044c-rtal-using-invalid-password-adminPortal\\video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 19426,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Failed. Error Message: The username or password provided in the request are invalid.\n"
+                        },
+                        {
+                          "text": "Returned Message \n          The username or password provided in the request are invalid.\n        \n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-03-03T12:37:27.189Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-4044c-rtal-using-invalid-password-adminPortal-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-4044c-rtal-using-invalid-password-adminPortal-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-c017802456460b626cb0",
+              "file": "demoSession.spec.ts",
+              "line": 26,
+              "column": 9
+            },
+            {
+              "title": "Verify user can not login to the Admin portal using invalid email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "timedOut",
+                      "duration": 31980,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 7,
+                            "line": 40
+                          },
+                          "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:40\n\n\u001b[0m \u001b[90m 38 |\u001b[39m } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 39 |\u001b[39m console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m }\n \u001b[90m 42 |\u001b[39m }\n \u001b[90m 43 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.doLogin (F:\\CloudUserAutomation\\pages\\loginPage.ts:40:7)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:37:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "An error occurred while trying to login: Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-03T12:36:46.037Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-77bc7--portal-using-invalid-email-adminPortal\\video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 27183,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Failed. Error Message: The username or password provided in the request are invalid.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-03-03T12:37:29.993Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-77bc7--portal-using-invalid-email-adminPortal-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-77bc7--portal-using-invalid-email-adminPortal-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-995b973624319119ee8b",
+              "file": "demoSession.spec.ts",
+              "line": 34,
+              "column": 9
+            },
+            {
+              "title": "Verify user can see the Dashboard on successful login to Admin Portal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-03T12:36:44.400Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-c04827accef5ace3cd1f",
+              "file": "demoSession.spec.ts",
+              "line": 41,
+              "column": 10
+            },
+            {
+              "title": "Verify user can Logout form the Admin Portal successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "adminPortal",
+                  "projectName": "adminPortal",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "timedOut",
+                      "duration": 30522,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                            "column": 25,
+                            "line": 14
+                          },
+                          "message": "Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36masync\u001b[39m waitFor (timeSeconds\u001b[33m:\u001b[39m number){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(timeSeconds  \u001b[33m*\u001b[39m\u001b[35m1000\u001b[39m)\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m         \n \u001b[90m 16 |\u001b[39m     }\n \u001b[90m 17 |\u001b[39m     \u001b[36masync\u001b[39m doLogin(username\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m \u001b[33m|\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m\n\u001b[2m    at LoginPage.waitFor (F:\\CloudUserAutomation\\pages\\basePage.ts:14:25)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:57:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-03T12:36:46.103Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal\\video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 4,
+                      "status": "timedOut",
+                      "duration": 31917,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "F:\\CloudUserAutomation\\pages\\loginPage.ts",
+                            "column": 13,
+                            "line": 79
+                          },
+                          "message": "Error: Unable to do Logout: Error: page.waitForTimeout: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\loginPage.ts:79\n\n\u001b[0m \u001b[90m 77 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m\"Successfully Logged out\"\u001b[39m)\n \u001b[90m 78 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 79 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Unable to do Logout: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 80 |\u001b[39m\n \u001b[90m 81 |\u001b[39m     }\n \u001b[90m 82 |\u001b[39m   }\u001b[0m\n\u001b[2m    at LoginPage.doLogout (F:\\CloudUserAutomation\\pages\\loginPage.ts:79:13)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\demoSession.spec.ts:58:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-03-03T12:37:29.995Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal-retry1\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 30003,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Login Successful\n"
+                        },
+                        {
+                          "text": "Username: ram Marshivane12\n"
+                        },
+                        {
+                          "text": "Successfully Logged out\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-03-03T12:38:05.854Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "F:\\CloudUserAutomation\\test-results\\demoSession-Login-Verify-u-88b20-e-Admin-Portal-successfully-adminPortal-retry2\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "ee9a41d3088626796d22-222a46a5213ba4db6087",
+              "file": "demoSession.spec.ts",
+              "line": 51,
+              "column": 9
             }
-          ],
-          "id": "cf8bdbdb9c249b1da15c-ff3e04e7cbbd44f9d2df",
-          "file": "accountTab.spec.ts",
-          "line": 10,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-20T13:13:29.718Z",
-    "duration": 238662.225,
-    "expected": 0,
+    "startTime": "2025-03-03T12:36:44.351Z",
+    "duration": 111959.006,
+    "expected": 1,
     "skipped": 1,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 3
   }
 }

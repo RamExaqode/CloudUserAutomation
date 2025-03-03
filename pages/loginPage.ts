@@ -10,8 +10,12 @@ export class LoginPage extends BasePage {
     let errorMessage: string | null = null;
 
     try {
-      await this.page.locator("input#signInName").fill(username);
-      await this.waitFor(1);
+      // Wait for the element to be visible
+await this.page.waitForSelector('input#signInName', { state: 'visible' });
+
+// Now fill the input field with the username
+await this.page.fill('input#signInName', username);
+
 
       await this.page.locator("input#password").fill(password);
       await this.waitFor(1);
